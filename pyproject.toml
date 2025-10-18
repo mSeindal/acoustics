@@ -1,0 +1,4 @@
+[tool.ruff]
+line-length = 88
+lint.extend-select = ["I"]  # enable import sorting
+lint.exclude = [".venv", "__pycache__"]
