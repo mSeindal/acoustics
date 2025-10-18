@@ -1,5 +1,4 @@
-from enum import IntEnum, Enum
-
+from enum import Enum, IntEnum
 
 """Common physical prefixes."""
 KILO = 1e3
@@ -18,6 +17,7 @@ NANOSECOND = 1e-9
 
 class SamplingRate(IntEnum):
     """Common sampling rates in Hz."""
+
     FS_44K1_HZ = 44100
     FS_48K_HZ = 48000
     FS_96K_HZ = 96000
@@ -26,6 +26,7 @@ class SamplingRate(IntEnum):
 
 class Unit(Enum):
     """Common physical units."""
+
     HERTZ = "Hz"
     DECIBEL = "dB"
     PASCAL = "Pa"

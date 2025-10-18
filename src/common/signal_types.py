@@ -99,21 +99,27 @@ def ramp_signal(
 def triangular_wave(
     sampling_rate: float, duration: float, frequency: float
 ) -> np.ndarray:
-    t = np.linspace(0, duration, number_of_samples(sampling_rate, duration), endpoint=False)
+    t = np.linspace(
+        0, duration, number_of_samples(sampling_rate, duration), endpoint=False
+    )
     return 2 * np.abs(2 * (t * frequency - np.floor(0.5 + t * frequency))) - 1
 
 
 def sawtooth_wave(
     sampling_rate: float, duration: float, frequency: float
 ) -> np.ndarray:
-    t = np.linspace(0, duration, number_of_samples(sampling_rate, duration), endpoint=False)
+    t = np.linspace(
+        0, duration, number_of_samples(sampling_rate, duration), endpoint=False
+    )
     return 2 * (t * frequency - np.floor(0.5 + t * frequency))
 
 
 def exponential_sweep(
     sampling_rate: float, duration: float, start_frq: float, end_frq: float
 ) -> np.ndarray:
-    t = np.linspace(0, duration, number_of_samples(sampling_rate, duration), endpoint=False)
+    t = np.linspace(
+        0, duration, number_of_samples(sampling_rate, duration), endpoint=False
+    )
     K = duration / np.log(end_frq / start_frq)
     L = start_frq * K
     sweep = np.sin(2 * np.pi * L * (np.exp(t / K) - 1))

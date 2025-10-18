@@ -1,21 +1,21 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from common.signal_types import (
-    sine_wave,
-    sawtooth_wave,
-    white_noise,
-    pink_noise,
-    brownian_noise,
-    unit_step_function,
-    log_sine_sweep,
-    impulse_response,
-    delta_function,
-    band_limited_noise,
-    triangular_wave,
-    exponential_sweep,
-)
-from common.constants import SamplingRate
 
+from common.constants import SamplingRate
+from common.signal_types import (
+    band_limited_noise,
+    brownian_noise,
+    delta_function,
+    exponential_sweep,
+    impulse_response,
+    log_sine_sweep,
+    pink_noise,
+    sawtooth_wave,
+    sine_wave,
+    triangular_wave,
+    unit_step_function,
+    white_noise,
+)
 
 if __name__ == "__main__":
     sampling_rate = SamplingRate.FS_48K_HZ  # Samples per second
