@@ -27,8 +27,8 @@ class SamplingRate(IntEnum):
 class Unit(Enum):
     """Common physical units."""
 
-    HERTZ = "Hz"
-    DECIBEL = "dB"
+    HZ = "Hz"
+    DB = "dB"
     PASCAL = "Pa"
     NEWTON = "N"
     METER = "m"
